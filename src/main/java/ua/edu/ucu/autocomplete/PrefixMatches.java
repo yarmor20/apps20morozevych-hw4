@@ -5,6 +5,7 @@ import ua.edu.ucu.tries.Tuple;
 import ua.edu.ucu.collections.StringKeeper;
 
 import java.util.ArrayList;
+import java.util.Locale;
 
 
 public class PrefixMatches {
@@ -24,7 +25,7 @@ public class PrefixMatches {
                 if (word.length() > 2) {
                     // convert the word to lowercase for more proper autocomplete work
                     // source: https://www.cs.princeton.edu/courses/archive/fall13/cos226/assignments/autocomplete.html
-                    this.trie.add(new Tuple(word.toLowerCase(), word.length()));
+                    this.trie.add(new Tuple(word.toLowerCase(Locale.ENGLISH), word.length()));
                 }
             }
 
@@ -36,14 +37,14 @@ public class PrefixMatches {
         if (word == null || word.equals("")) {
             throw new IllegalArgumentException("Empty strings are not maintained.");
         }
-        return this.trie.contains(word.toLowerCase());
+        return this.trie.contains(word.toLowerCase(Locale.ENGLISH));
     }
 
     public boolean delete(String word) {
         if (word == null || word.equals("")) {
             throw new IllegalArgumentException("Empty strings are not maintained.");
         }
-        return this.trie.delete(word.toLowerCase());
+        return this.trie.delete(word.toLowerCase(Locale.ENGLISH));
     }
 
     public Iterable<String> wordsWithPrefix(String pref) {

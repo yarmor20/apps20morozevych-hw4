@@ -20,7 +20,7 @@ public class RWayTrie implements Trie {
     /*
     * Throw IllegalArgumentException if character is not a letter.
     */
-    private void ValidateCharacter(char c) {
+    private void validateCharacter(char c) {
         if (c < FIRST_ALPH_CH || c > LAST_ALPH_CH) {
             throw new IllegalArgumentException("Not valid character! ");
         }
@@ -56,7 +56,7 @@ public class RWayTrie implements Trie {
 
         // Use dth key char to identify subtrie.
         char c = key.charAt(dest);
-        ValidateCharacter(c);
+        validateCharacter(c);
 
         // We subtract FIRST_ALPH_CH from c as our array has bounds [0, 25], while
         // ASCII characters start with 65
@@ -121,7 +121,7 @@ public class RWayTrie implements Trie {
             node.val = null;
         } else {
             char c = key.charAt(dest);
-            ValidateCharacter(c);
+            validateCharacter(c);
 
             node.next[c - FIRST_ALPH_CH] = delete(node.next[c - FIRST_ALPH_CH], key, dest + 1);
         }
