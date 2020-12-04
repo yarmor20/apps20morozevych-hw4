@@ -1,8 +1,8 @@
 package ua.edu.ucu.tries;
 
 
-import ua.edu.ucu.collections.Queue;
-import ua.edu.ucu.collections.StringKeeper;
+import ua.edu.ucu.collections.queue.Queue;
+import ua.edu.ucu.collections.iterable.StringKeeper;
 
 
 public class RWayTrie implements Trie {

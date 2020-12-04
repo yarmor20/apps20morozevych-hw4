@@ -1,7 +1,7 @@
-package ua.edu.ucu.collections;
+package ua.edu.ucu.collections.immutable;
 
 
-public class ImmutableLinkedList implements ImmutableList{
+public class ImmutableLinkedList implements ImmutableList {
     private final Node head;
     private int length = 0;
 

@@ -1,5 +1,7 @@
-package ua.edu.ucu.collections;
+package ua.edu.ucu.collections.queue;
 
+
+import ua.edu.ucu.collections.immutable.ImmutableLinkedList;
 
 public class Queue {
     private ImmutableLinkedList list = null;

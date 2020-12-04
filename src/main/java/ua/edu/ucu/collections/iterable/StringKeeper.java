@@ -1,4 +1,4 @@
-package ua.edu.ucu.collections;
+package ua.edu.ucu.collections.iterable;
 
 import java.util.Iterator;
 

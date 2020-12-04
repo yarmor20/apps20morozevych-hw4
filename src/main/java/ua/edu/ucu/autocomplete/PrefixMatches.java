@@ -2,7 +2,7 @@ package ua.edu.ucu.autocomplete;
 
 import ua.edu.ucu.tries.Trie;
 import ua.edu.ucu.tries.Tuple;
-import ua.edu.ucu.collections.StringKeeper;
+import ua.edu.ucu.collections.iterable.StringKeeper;
 
 import java.util.ArrayList;
 import java.util.Locale;
@@ -31,7 +31,6 @@ public class PrefixMatches {
                             word.length()));
                 }
             }
-
         }
         return size();
     }
